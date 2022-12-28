@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+   public static int UsAlma(){
+       int taban,us;
+       int finalResult=1;
+       Scanner input = new Scanner(System.in);
+       System.out.println("Lütfen Taban Sayi Giriniz");
+        taban =input.nextInt();
+        if(taban ==1){
+            return 1;
+        }
+        System.out.println("Lütfen Üs Sayisi Girin");
+        us=input.nextInt();
+
+
+        for(int i=1;i<us;i++){
+                finalResult *= taban;
+        }
+        System.out.println(finalResult);
+        return UsAlma();
+
+    }
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    UsAlma();
+    }
+}
